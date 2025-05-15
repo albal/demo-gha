@@ -15,7 +15,7 @@ jobs:
       # Install deps & build the action
       - name: Build local action
         run: |
-          npm ci
+          npm install
           npm run build       # produces dist/index.js
         working-directory: ./.github/actions/hello-ts
 
