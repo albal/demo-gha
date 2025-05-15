@@ -7,11 +7,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Set up Node so we can run npm & tsc
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Install deps & build the action
+      - name: Build local action
+        run: |
+          npm ci
+          npm run build       # produces dist/index.js
+        working-directory: ./.github/actions/hello-ts
+
       # Call the action via a relative path
       - name: Run custom hello action
         uses: ./.github/actions/hello-ts
         with:
-          who-to-greet: "Octo Cat"
+          who-to-greet: "Al West"
 
       - name: Show returned time
         run: echo "Action ran at ${{ steps.greet.outputs.time }}"
