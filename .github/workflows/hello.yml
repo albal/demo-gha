@@ -21,6 +21,7 @@ jobs:
 
       # Call the action via a relative path
       - name: Run custom hello action
+        id: greet
         uses: ./.github/actions/hello-ts
         with:
           who-to-greet: "Al West"
