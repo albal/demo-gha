@@ -13,7 +13,8 @@
     "@actions/exec": "^1.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "@types/node": "^20.12.0"
   }
 }
 
