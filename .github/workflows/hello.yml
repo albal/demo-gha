@@ -9,7 +9,7 @@ jobs:
 
       # Call the action via a relative path
       - name: Run custom hello action
-        uses: ./github/actions/hello-ts
+        uses: ./.github/actions/hello-ts
         with:
           who-to-greet: "Octo Cat"
 
