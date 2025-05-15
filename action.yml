@@ -1,0 +1,14 @@
+name: "Hello TypeScript Action"
+description: "Greets you and sets an output"
+author: "Your Name"
+inputs:
+  who-to-greet:
+    description: "Whom should I greet?"
+    required: false
+    default: "World"
+outputs:
+  time:
+    description: "The time when the greeting ran"
+runs:
+  using: "node20"
+  main: "dist/index.js"   # compiled JavaScript goes here

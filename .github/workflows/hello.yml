@@ -1,0 +1,17 @@
+name: Demo Hello-TS Action
+on: [push]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Call the action via a relative path
+      - name: Run custom hello action
+        uses: ./github/actions/hello-ts
+        with:
+          who-to-greet: "Octo Cat"
+
+      - name: Show returned time
+        run: echo "Action ran at ${{ steps.greet.outputs.time }}"

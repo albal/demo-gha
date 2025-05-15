@@ -1,0 +1,19 @@
+{
+  "name": "hello-typescript-action",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "files": ["dist", "action.yml"],
+  "scripts": {
+    "build": "tsc",
+    "package": "npm run build"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
+
